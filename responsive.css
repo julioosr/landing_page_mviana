@@ -44,7 +44,7 @@
   .hero h1 { font-size: clamp(31px, 4.5vw, 43px); letter-spacing: -1.5px; }
   .hero-description { font-size: 13px; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 15px; }
-  .hero-stats { gap: 16px; margin-top: 28px; }
+  .hero-stats { gap: 28px; margin-top: 28px; }
   .hero-stat { gap: 8px; }
   .stat-icon { width: 36px; height: 36px; font-size: 16px; }
   .hero-stat strong { font-size: 11px; }
@@ -67,7 +67,7 @@
   .section { padding: 62px 0; }
   .header-container { min-height: 68px; gap: 8px; }
   .brand { gap: 8px; }
-  .brand-mark { width: 39px; height: 36px; font-size: 15px; }
+  .brand-logo { width: 66px; height: 48px; }
   .brand-name { font-size: 12px; }
   .menu-toggle { width: 36px; height: 38px; font-size: 25px; }
   .header-cta { min-height: 37px; padding: 0 10px; border-radius: 7px; font-size: 9px; gap: 5px; }
@@ -84,7 +84,7 @@
   .hero-actions { flex-direction: row; align-items: center; flex-wrap: wrap; gap: 14px; margin-top: 21px; }
   .hero-actions .button { min-height: 44px; padding-inline: 14px; font-size: 10px; }
   .text-link { font-size: 10px; }
-  .hero-stats { gap: 18px; margin-top: 25px; padding-top: 20px; }
+  .hero-stats { gap: 30px; margin-top: 25px; padding-top: 20px; }
   .trust-strip { padding: 15px 0; }
   .trust-grid { gap: 0; }
   .trust-item { min-height: 44px; flex-direction: column; gap: 5px; font-size: 10px; text-align: center; }
@@ -107,13 +107,19 @@
   .project-tags { min-width: 0; gap: 6px; }
   .project-tags span { font-size: 8px; }
   .carousel-arrow { width: 38px; height: 38px; }
-  .project-disclaimer { font-size: 9px; line-height: 1.6; }
   .contact-grid { grid-template-columns: 1fr; gap: 24px; }
   .map-frame, .map-frame iframe { min-height: 270px; height: 270px; }
   .contact-link { padding: 12px; gap: 11px; }
   .contact-icon { width: 40px; height: 40px; font-size: 17px; }
   .contact-link strong { font-size: 11px; }
-  .site-footer { padding: 20px 0; }
+  .site-footer { padding: 25px 0 20px; }
+  .footer-container { grid-template-columns: 1fr; justify-items: center; gap: 18px; }
+  .footer-company { align-items: center; text-align: center; }
+  .footer-company > strong { font-size: 16px; }
+  .footer-company p { font-size: 10px; }
+  .footer-right { align-items: center; text-align: center; }
+  .footer-credit { font-size: 15px; }
+  .footer-legal { text-align: center; }
   .floating-whatsapp, .back-to-top { bottom: 15px; width: 46px; height: 46px; }
   .floating-whatsapp { left: 15px; font-size: 22px; }
   .back-to-top { right: 15px; }

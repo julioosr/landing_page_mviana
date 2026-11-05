@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Menu mobile
   const menuToggle = document.querySelector("#menu-toggle");
   const navigation = document.querySelector("#main-navigation");
 
@@ -33,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Botão voltar ao topo
   const backToTop = document.querySelector("#back-to-top");
 
   if (backToTop) {
@@ -49,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Carrossel de projetos (três slides)
   const slides = Array.from(document.querySelectorAll(".project-slide"));
   const dots = Array.from(document.querySelectorAll(".carousel-dot"));
   const previousButton = document.querySelector("#project-prev");
@@ -91,7 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // Permite navegar pelo carrossel com as setas do teclado quando ele está em foco.
     const carousel = document.querySelector(".project-carousel");
     carousel?.setAttribute("tabindex", "0");
     carousel?.addEventListener("keydown", (event) => {
