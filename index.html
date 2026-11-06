@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#176b3a">
   <meta name="description" content="Metalúrgica Viana: estruturas metálicas, pré-moldados, coberturas e soluções para sua obra. Entre em contato e solicite um orçamento.">
-  <title>Metalúrgica Viana</title>
+  <title>Metalúrgica Viana | Estruturas Metálicas em Horizontina/RS</title>
   <link rel="icon" type="image/png" href="assets/img/logo-metalurgica-viana.png">
   <link rel="apple-touch-icon" href="assets/img/logo-metalurgica-viana.png">
 
@@ -22,7 +22,7 @@
   <header class="site-header" id="topo">
     <div class="container header-container">
       <a class="brand" href="#inicio" aria-label="Metalúrgica Viana - início">
-        <img class="brand-logo" src="assets/img/logo-metalurgica-viana.png" alt="Logo Metalúrgica Viana">
+        <img class="brand-logo" src="assets/img/logo-metalurgica-viana.webp" alt="Logo Metalúrgica Viana">
         <span class="brand-name">Metalúrgica <strong>Viana</strong></span>
       </a>
 
@@ -48,12 +48,31 @@
     <section class="hero section" id="inicio">
       <div class="container hero-grid">
         <div class="hero-image-wrap">
-          <img
-            class="hero-image"
-            src="assets/img/foto_inicio.png"
-            alt="Profissional trabalhando em uma estrutura metálica"
-            fetchpriority="high">
-          <div class="image-label"><span class="label-dot"></span> Soluções para sua obra</div>
+          <div class="hero-carousel" id="hero-carousel" role="group" aria-roledescription="carrossel" aria-label="Fotos de obras da Metalúrgica Viana">
+            <figure class="hero-slide is-current" data-label="Soluções para sua obra">
+              <img
+                class="hero-image"
+                src="assets/img/execucao_e_montagem.webp"
+                alt="Profissional soldando uma estrutura metálica na oficina da Metalúrgica Viana"
+                fetchpriority="high">
+            </figure>
+            <figure class="hero-slide" data-label="Coberturas com estrutura robusta">
+              <img
+                class="hero-image"
+                src="assets/img/cobertura.webp"
+                alt="Cobertura metálica com treliças e pilares de aço em um galpão"
+                decoding="async">
+            </figure>
+            <figure class="hero-slide" data-label="Galpões feitos para durar">
+              <img
+                class="hero-image"
+                src="assets/img/galpao_industrial.webp"
+                alt="Galpão industrial com estrutura metálica, cobertura e fechamento lateral em telhas"
+                decoding="async">
+            </figure>
+            <canvas class="hero-canvas" id="hero-canvas" role="img" hidden></canvas>
+          </div>
+          <div class="image-label"><span class="label-dot"></span> <span class="label-text" id="hero-label">Soluções para sua obra</span></div>
         </div>
 
         <div class="hero-content">
@@ -72,7 +91,7 @@
           <div class="hero-stats">
             <div class="hero-stat">
               <span class="stat-icon"><i class="bi bi-calendar-check" aria-hidden="true"></i></span>
-              <div><strong>40 anos</strong><span>de experiência</span></div>
+              <div><strong><span class="count-up" data-count="40">40</span> anos</strong><span>de experiência</span></div>
             </div>
             <div class="hero-stat">
               <span class="stat-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span>
@@ -87,22 +106,22 @@
       <div class="container trust-grid">
         <article class="trust-item">
           <span class="trust-icon"><i class="bi bi-patch-check" aria-hidden="true"></i></span>
-          <span>Qualidade</span>
+          <span class="trust-text">Qualidade</span>
         </article>
         <article class="trust-item">
           <span class="trust-icon"><i class="bi bi-speedometer2" aria-hidden="true"></i></span>
-          <span>Eficiência</span>
+          <span class="trust-text">Eficiência</span>
         </article>
         <article class="trust-item">
           <span class="trust-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></span>
-          <span>Confiabilidade</span>
+          <span class="trust-text">Confiabilidade</span>
         </article>
       </div>
     </section>
 
     <section class="section about-section" id="empresa">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading section-heading-wide">
           <span class="eyebrow"><span></span> SOBRE A EMPRESA</span>
           <h2>Por que escolher a <span>Metalúrgica Viana?</span></h2>
           <p>Experiência, atenção aos detalhes e soluções pensadas para as necessidades de cada projeto.</p>
@@ -156,7 +175,7 @@
         <div class="services-grid">
           <article class="service-card">
             <div class="service-image">
-              <img src="assets/img/estruturas_metalicas.jpg" alt="Estrutura de aço em construção" loading="lazy">
+              <img src="assets/img/estruturas_metalicas.webp" alt="Estrutura de aço em construção" loading="lazy">
               <span class="service-icon"><i class="bi bi-building" aria-hidden="true"></i></span>
             </div>
             <div class="service-content">
@@ -168,7 +187,7 @@
 
           <article class="service-card">
             <div class="service-image">
-              <img src="assets/img/pre_moldados.jpg" alt="Construção com elementos pré-moldados" loading="lazy">
+              <img src="assets/img/pre_moldados.webp" alt="Construção com elementos pré-moldados" loading="lazy">
               <span class="service-icon"><i class="bi bi-bricks" aria-hidden="true"></i></span>
             </div>
             <div class="service-content">
@@ -180,7 +199,7 @@
 
           <article class="service-card">
             <div class="service-image">
-              <img src="assets/img/cobertura.png" alt="Cobertura metálica de uma edificação" loading="lazy">
+              <img src="assets/img/galpao_sehn.webp" alt="Galpão da SEHN com cobertura metálica vermelha" loading="lazy">
               <span class="service-icon"><i class="bi bi-house-gear" aria-hidden="true"></i></span>
             </div>
             <div class="service-content">
@@ -192,7 +211,7 @@
 
           <article class="service-card">
             <div class="service-image">
-              <img src="assets/img/locacao_caminhao_munk.png" alt="Caminhão utilizado em operações de transporte" loading="lazy">
+              <img src="assets/img/locacao_caminhao_munk.webp" alt="Caminhão utilizado em operações de transporte" loading="lazy">
               <span class="service-icon"><i class="bi bi-truck" aria-hidden="true"></i></span>
             </div>
             <div class="service-content">
@@ -218,8 +237,8 @@
         <div class="project-carousel" aria-roledescription="carrossel" aria-label="Projetos da Metalúrgica Viana">
           <div class="project-slide is-active" data-project="0">
             <div class="project-image">
-              <img src="assets/img/estrutura_para_pavilhao.png" alt="Edificação comercial com estrutura moderna" loading="lazy">
-              <span class="project-counter">01 <span>/ 04</span></span>
+              <img src="assets/img/estrutura_para_pavilhao.webp" alt="Edificação comercial com estrutura moderna" loading="lazy">
+              <span class="project-counter">01 <span>/ 05</span></span>
             </div>
             <div class="project-details">
               <div>
@@ -233,14 +252,14 @@
 
           <div class="project-slide" data-project="1" hidden>
             <div class="project-image">
-              <img src="assets/img/grades.jpg" alt="Grade e portão metálico de correr em ambiente industrial" loading="lazy">
-              <span class="project-counter">02 <span>/ 04</span></span>
+              <img src="assets/img/grades.webp" alt="Grade metálica em ambiente industrial" loading="lazy">
+              <span class="project-counter">02 <span>/ 05</span></span>
             </div>
             <div class="project-details">
               <div>
-                <span class="project-category">GRADES E PORTÕES</span>
-                <h3>Grades e portões metálicos</h3>
-                <p>Fabricação de grades e portões metálicos sob medida, desenvolvidos para oferecer segurança, resistência e acabamento de qualidade em diferentes tipos de ambientes.</p>
+                <span class="project-category">PROTEÇÃO E SEGURANÇA</span>
+                <h3>Grades metálicas sob medida</h3>
+                <p>Fabricação de grades metálicas desenvolvidas para oferecer segurança, resistência e acabamento de qualidade em diferentes tipos de ambientes.</p>
               </div>
               <div class="project-tags"><span>Segurança</span><span>Resistência</span><span>Sob medida</span></div>
             </div>
@@ -248,8 +267,23 @@
 
           <div class="project-slide" data-project="2" hidden>
             <div class="project-image">
-              <img src="assets/img/execucao_e_montagem.jpg" alt="Equipe trabalhando em uma obra" loading="lazy">
-              <span class="project-counter">03 <span>/ 04</span></span>
+              <img src="assets/img/portao.webp" alt="Portão de garagem metálico branco com porta social integrada" loading="lazy">
+              <span class="project-counter">03 <span>/ 05</span></span>
+            </div>
+            <div class="project-details">
+              <div>
+                <span class="project-category">PORTÕES</span>
+                <h3>Portões de garagem</h3>
+                <p>Portões fabricados sob medida para garagens e acessos, com porta social integrada e acabamento limpo, unindo praticidade e segurança no dia a dia.</p>
+              </div>
+              <div class="project-tags"><span>Sob medida</span><span>Praticidade</span><span>Acabamento</span></div>
+            </div>
+          </div>
+
+          <div class="project-slide" data-project="3" hidden>
+            <div class="project-image">
+              <img src="assets/img/funcionarios.webp" alt="Equipe da Metalúrgica Viana soldando e montando estruturas metálicas na oficina" loading="lazy">
+              <span class="project-counter">04 <span>/ 05</span></span>
             </div>
             <div class="project-details">
               <div>
@@ -261,10 +295,10 @@
             </div>
           </div>
 
-          <div class="project-slide" data-project="3" hidden>
+          <div class="project-slide" data-project="4" hidden>
             <div class="project-image">
-              <img src="assets/img/espaco_para_crescer.png" alt="Edificação industrial finalizada" loading="lazy">
-              <span class="project-counter">04 <span>/ 04</span></span>
+              <img src="assets/img/espaco_para_crescer.webp" alt="Edificação industrial finalizada" loading="lazy">
+              <span class="project-counter">05 <span>/ 05</span></span>
             </div>
             <div class="project-details">
               <div>
@@ -282,6 +316,7 @@
               <button class="carousel-dot" type="button" aria-label="Mostrar projeto 2" data-slide-to="1"></button>
               <button class="carousel-dot" type="button" aria-label="Mostrar projeto 3" data-slide-to="2"></button>
               <button class="carousel-dot" type="button" aria-label="Mostrar projeto 4" data-slide-to="3"></button>
+              <button class="carousel-dot" type="button" aria-label="Mostrar projeto 5" data-slide-to="4"></button>
             </div>
             <div class="carousel-arrows">
               <button class="carousel-arrow" id="project-prev" type="button" aria-label="Projeto anterior"><i class="bi bi-arrow-left" aria-hidden="true"></i></button>
@@ -292,12 +327,56 @@
       </div>
     </section>
 
+    <section class="section news-section" id="novidades">
+      <div class="container">
+        <div class="section-heading section-heading-row">
+          <div>
+            <span class="eyebrow"><span></span> NAS REDES SOCIAIS</span>
+            <h2>Últimas <span>publicações.</span></h2>
+          </div>
+          <p>Acompanhe as novidades, obras e bastidores da Metalúrgica Viana.</p>
+        </div>
+
+        <div class="news-grid">
+          <article class="news-card news-video-card">
+            <header class="news-card-header news-video-header">
+              <span class="news-network"><i class="bi bi-play-btn" aria-hidden="true"></i></span>
+              <div><strong>Nosso trabalho em vídeo</strong><small>Metalúrgica Viana</small></div>
+            </header>
+            <div class="news-video">
+              <video id="video-institucional" controls playsinline preload="none" poster="assets/video/metalurgica-viana-capa.webp" aria-label="Vídeo da Metalúrgica Viana">
+                <source src="assets/video/metalurgica-viana.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeo.
+              </video>
+              <button class="video-play" id="video-play" type="button" aria-label="Reproduzir vídeo"><i class="bi bi-play-fill" aria-hidden="true"></i></button>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <header class="news-card-header news-instagram">
+              <span class="news-network"><i class="bi bi-instagram" aria-hidden="true"></i></span>
+              <div><strong>Instagram</strong><small>@metalurgicaviana</small></div>
+              <a class="news-follow" href="https://www.instagram.com/metalurgicaviana/" target="_blank" rel="noopener noreferrer">Seguir <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            </header>
+            <div class="news-frame">
+              <iframe
+                title="Últimas publicações no Instagram da Metalúrgica Viana"
+                src="https://www.instagram.com/metalurgicaviana/embed"
+                loading="lazy"
+                scrolling="no"
+                allowtransparency="true"></iframe>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section contact-section" id="contato">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading section-heading-wide">
           <span class="eyebrow"><span></span> FALE CONOSCO</span>
-          <h2>Vamos conversar sobre <span>sua obra?</span></h2>
-          <p>Entre em contato com nossa equipe para tirar dúvidas ou solicitar um orçamento.</p>
+          <h2>Pronto para começar? <span>Entre em contato.</span></h2>
+          <p>Nossa equipe está pronta para tirar suas dúvidas e preparar o seu orçamento.</p>
         </div>
 
         <div class="contact-grid">
@@ -319,8 +398,8 @@
 
           <div class="contact-list">
             <a class="contact-link" href="https://wa.me/555535372075" target="_blank" rel="noopener noreferrer">
-              <span class="contact-icon"><i class="bi bi-whatsapp" aria-hidden="true"></i></span>
-              <span><small>WhatsApp</small><strong>(55) 3537-2075</strong></span>
+              <span class="contact-icon"><i class="bi bi-telephone" aria-hidden="true"></i></span>
+              <span><small>Telefone e WhatsApp</small><strong>(55) 3537-2075</strong></span>
               <i class="bi bi-arrow-up-right contact-link-arrow" aria-hidden="true"></i>
             </a>
             <a class="contact-link" href="https://www.instagram.com/metalurgicaviana/" target="_blank" rel="noopener noreferrer">
@@ -340,18 +419,32 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-container">
+    <div class="container footer-main">
       <div class="footer-company">
-        <strong>METALÚRGICA VIANA</strong>
+        <a class="footer-brand" href="#inicio" aria-label="Metalúrgica Viana - voltar ao início">
+          <span class="footer-logo"><img src="assets/img/logo-metalurgica-viana.webp" alt="Logo Metalúrgica Viana" loading="lazy"></span>
+          <strong>METALÚRGICA <span>VIANA</span></strong>
+        </a>
         <p>Conte com a experiência de 40 anos da Metalúrgica Viana em estruturas metálicas, pré-moldados e coberturas para projetos agrícolas, industriais e comerciais.</p>
         <span class="footer-cnpj"><strong>CNPJ:</strong> 91.816.900/0001-67</span>
       </div>
-      <div class="footer-right">
-        <div class="footer-credit">JR Design</div>
-        <div class="footer-legal">© Todos os direitos reservados.</div>
+      <nav class="footer-nav" aria-label="Menu do rodapé">
+        <span class="footer-nav-title">Menu</span>
+        <a href="#inicio">Início</a>
+        <a href="#empresa">Empresa</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© Todos os direitos reservados.</span>
+        <span class="footer-credit" id="jr-credit">By <a href="https://www.linkedin.com/in/julio-samuel-rodrigues-0a1265294/" target="_blank" rel="noopener noreferrer" aria-label="Desenvolvido por JR Design - LinkedIn">JR Design</a></span>
       </div>
     </div>
   </footer>
