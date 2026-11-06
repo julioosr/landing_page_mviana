@@ -5,7 +5,7 @@
   .main-navigation { gap: 16px; }
   .main-navigation a { font-size: 13px; }
   .header-cta { padding-inline: 14px; font-size: 12px; }
-  .brand-name { font-size: 18px; }
+  .brand-name { font-size: clamp(19px, 2.4vw, 24px); }
   .hero-grid { gap: 40px; }
   .hero-carousel, .hero-image-wrap { min-height: 460px; }
   .hero-carousel { height: 480px; }
@@ -24,6 +24,7 @@
   .header-container { min-height: 76px; flex-wrap: wrap; gap: 12px; }
   .brand { margin-right: auto; }
   .brand-logo { width: 90px; height: 64px; }
+  .brand-name { font-size: 22px; }
   .menu-toggle { display: inline-grid; width: 44px; height: 44px; place-items: center; order: 2; }
   .header-cta { order: 3; font-size: 13px; }
   .main-navigation {
@@ -85,7 +86,7 @@
   .brand { min-width: 0; flex-shrink: 1; }
   .brand { gap: 8px; }
   .brand-logo { width: 70px; height: 50px; }
-  .brand-name { font-size: 14px; }
+  .brand-name { font-size: 17px; letter-spacing: -.3px; }
   .menu-toggle { width: 38px; height: 40px; font-size: 28px; }
   .header-cta { min-height: 42px; padding: 0 12px; border-radius: 8px; font-size: 12px; gap: 5px; }
   .header-cta i { display: none; }
@@ -163,12 +164,13 @@
 
 @media (max-width: 430px) {
   .header-container { flex-wrap: nowrap; }
-  .brand-name { font-size: 13px; white-space: normal; }
+  .brand-name { font-size: clamp(13px, calc((100vw - 262px) / 6.9), 17px); white-space: normal; }
   .header-cta { max-width: 104px; padding: 0 10px; font-size: 11.5px; line-height: 1.15; text-align: center; white-space: normal; }
 }
 
 @media (max-width: 370px) {
-  .brand-name { max-width: 84px; font-size: 12px; }
+  .brand-logo { width: 58px; height: 42px; }
+  .brand-name { font-size: clamp(12px, calc((100vw - 250px) / 6.9), 15px); }
   .header-cta { max-width: 92px; font-size: 11px; }
   .hero-stats { gap: 12px; }
   .hero-stat { flex-direction: column; align-items: flex-start; gap: 8px; }

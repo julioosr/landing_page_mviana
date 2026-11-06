@@ -45,7 +45,7 @@ section[id] { scroll-margin-top: 94px; }
 .brand { display: inline-flex; align-items: center; gap: 11px; flex-shrink: 0; }
 .brand-logo { width: 104px; height: 74px; object-fit: contain; }
 
-.brand-name { font-size: 20px; line-height: 1.2; font-weight: 500; white-space: nowrap; }
+.brand-name { font-size: 28px; line-height: 1.1; font-weight: 600; letter-spacing: -.6px; white-space: nowrap; }
 .brand-name strong { display: block; font-weight: 800; }
 .main-navigation { display: flex; align-items: center; justify-content: flex-end; gap: clamp(14px, 2vw, 27px); margin-left: auto; }
 .main-navigation a { position: relative; padding: 8px 0; color: #2f3531; font-size: 14px; font-weight: 600; transition: color .2s ease; }
