@@ -5,7 +5,7 @@
   .main-navigation { gap: 16px; }
   .main-navigation a { font-size: 13px; }
   .header-cta { padding-inline: 14px; font-size: 12px; }
-  .brand-name { font-size: clamp(19px, 2.4vw, 24px); }
+  .brand-name { font-size: 20px; }
   .hero-grid { gap: 40px; }
   .hero-carousel, .hero-image-wrap { min-height: 460px; }
   .hero-carousel { height: 480px; }
