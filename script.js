@@ -51,6 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const dots = Array.from(document.querySelectorAll(".carousel-dot"));
   const previousButton = document.querySelector("#project-prev");
   const nextButton = document.querySelector("#project-next");
+  const carouselRoot = document.querySelector(".project-carousel");
+  const markUsed = () => carouselRoot?.classList.add("is-used");
   let currentSlide = 0;
 
   const showSlide = (index) => {
@@ -78,25 +80,68 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   if (slides.length) {
-    previousButton?.addEventListener("click", () => showSlide(currentSlide - 1));
-    nextButton?.addEventListener("click", () => showSlide(currentSlide + 1));
+    previousButton?.addEventListener("click", () => { markUsed(); showSlide(currentSlide - 1); });
+    nextButton?.addEventListener("click", () => { markUsed(); showSlide(currentSlide + 1); });
 
     dots.forEach((dot) => {
       dot.addEventListener("click", () => {
         const index = Number(dot.dataset.slideTo);
-        if (Number.isInteger(index)) showSlide(index);
+        if (Number.isInteger(index)) { markUsed(); showSlide(index); }
       });
     });
 
     const carousel = document.querySelector(".project-carousel");
     carousel?.setAttribute("tabindex", "0");
     carousel?.addEventListener("keydown", (event) => {
-      if (event.key === "ArrowLeft") showSlide(currentSlide - 1);
-      if (event.key === "ArrowRight") showSlide(currentSlide + 1);
+      if (event.key === "ArrowLeft") { markUsed(); showSlide(currentSlide - 1); }
+      if (event.key === "ArrowRight") { markUsed(); showSlide(currentSlide + 1); }
     });
+
+    // Arrastar para o lado no celular também troca o projeto
+    let touchStartX = 0;
+    let touchStartY = 0;
+    carousel?.addEventListener("touchstart", (event) => {
+      touchStartX = event.changedTouches[0].clientX;
+      touchStartY = event.changedTouches[0].clientY;
+    }, { passive: true });
+    carousel?.addEventListener("touchend", (event) => {
+      const dx = event.changedTouches[0].clientX - touchStartX;
+      const dy = event.changedTouches[0].clientY - touchStartY;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+        markUsed();
+        showSlide(currentSlide + (dx < 0 ? 1 : -1));
+      }
+    }, { passive: true });
 
     showSlide(0);
   }
+
+  /* ---------- Títulos que precisam caber em uma única linha no celular ---------- */
+  const fitOneLineHeadings = () => {
+    const isMobile = window.matchMedia("(max-width: 600px)").matches;
+
+    document.querySelectorAll("[data-fit-line]").forEach((heading) => {
+      heading.style.fontSize = "";
+      if (!isMobile) return;
+
+      const available = heading.closest(".container")?.clientWidth || window.innerWidth - 32;
+      let size = parseFloat(getComputedStyle(heading).fontSize);
+
+      while (heading.scrollWidth > available && size > 18) {
+        size -= 0.5;
+        heading.style.fontSize = `${size}px`;
+      }
+    });
+  };
+
+  let fitTimer;
+  fitOneLineHeadings();
+  window.addEventListener("load", fitOneLineHeadings);
+  window.addEventListener("resize", () => {
+    clearTimeout(fitTimer);
+    fitTimer = setTimeout(fitOneLineHeadings, 120);
+  });
+  document.fonts?.ready.then(fitOneLineHeadings);
 
   /* ---------- Animações e efeitos de rolagem ---------- */
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
