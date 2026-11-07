@@ -27,22 +27,35 @@
   .brand-name { font-size: 22px; }
   .menu-toggle { display: inline-grid; width: 44px; height: 44px; place-items: center; order: 2; }
   .header-cta { order: 3; font-size: 13px; }
+  /* Menu mobile: as opções entram deslizando da direita para a esquerda */
   .main-navigation {
     position: absolute;
     top: calc(100% - 1px);
     right: 0;
     left: 0;
-    display: none;
+    display: flex;
+    flex-direction: column;
     align-items: stretch;
     gap: 0;
     margin: 0;
     padding: 10px 20px 18px;
+    overflow: hidden;
     border-bottom: 1px solid var(--line);
     background: var(--white);
     box-shadow: 0 15px 20px rgba(20,50,31,.08);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease, visibility 0s linear .45s;
   }
-  .main-navigation.is-open { display: flex; flex-direction: column; }
-  .main-navigation a { padding: 15px 4px; border-bottom: 1px solid var(--line); font-size: 16px; }
+  .main-navigation.is-open { visibility: visible; opacity: 1; pointer-events: auto; transition: opacity .2s ease, visibility 0s; }
+  .main-navigation a { padding: 15px 4px; border-bottom: 1px solid var(--line); font-size: 16px; opacity: 0; transform: translateX(100%); transition: transform .3s ease-in, opacity .25s ease, color .2s ease; }
+  .main-navigation.is-open a { opacity: 1; transform: translateX(0); transition: transform .55s cubic-bezier(.22, .9, .28, 1) calc(var(--i) * 80ms + 60ms), opacity .4s ease calc(var(--i) * 80ms + 60ms), color .2s ease; }
+  .main-navigation a:nth-child(1) { --i: 0; }
+  .main-navigation a:nth-child(2) { --i: 1; }
+  .main-navigation a:nth-child(3) { --i: 2; }
+  .main-navigation a:nth-child(4) { --i: 3; }
+  .main-navigation a:nth-child(5) { --i: 4; }
   .main-navigation a:last-child { border-bottom: 0; }
   .main-navigation a::after { display: none; }
 
@@ -180,4 +193,8 @@
 
 @media (hover: none) {
   .button::after { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-navigation a, .main-navigation.is-open a { transform: none; transition-delay: 0s !important; }
 }
